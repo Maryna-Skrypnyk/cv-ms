@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "cv-ms",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://Maryna-Skrypnyk.github.io/cv-ms",
@@ -9,23 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/cv-ms.git"
+    "url": "git+https://github.com/maryna-skrypnyk/cv-ms.git"
   },
   "keywords": [],
   "author": "Maryna Skrypnyk <marina.skrypnyk@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/cv-ms/issues"
+    "url": "https://github.com/maryna-skrypnyk/cv-ms/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0",
-    "sass": "^1.62.0"
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "netlify-cli": "^14.1.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.62.0"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
