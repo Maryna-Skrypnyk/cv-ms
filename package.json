@@ -5,7 +5,9 @@
   "homepage": "https://Maryna-Skrypnyk.github.io/cv-ms/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /cv-ms/"
+    "build": "parcel build src/*.html --public-url /cv-ms/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "gh-pages": "^5.0.0",
     "netlify-cli": "^14.1.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
