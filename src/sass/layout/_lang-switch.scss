@@ -1,13 +1,13 @@
-.lang-switch {
+.select {
   @media screen and (max-width: 768px) {
     position: fixed;
     left: 10px;
-    top: 8px;
+    top: 10px;
   }
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    top: 50px;
+    top: 52px;
     right: 165px;
     // top: 5px;
     // right: 68px;
@@ -17,26 +17,49 @@
     display: none;
   }
 }
-
-.change-lang {
-  width: 56px;
-  height: 32px;
-  padding: 2px;
-  border-radius: 8px;
-  // border: 3px solid $accent-color;
-  border: 2px solid transparent;
-  color: $sidebar-bg-color;
-  font-weight: 700;
-  background-color: $dots-color;
-  margin: 0;
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 4px 8px;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: 16px;
   cursor: pointer;
+  line-height: inherit;
   outline: none;
+  height: 26px;
+  color: $sidebar-bg-color;
+  font-weight: 500;
+}
 
-  @media screen and (min-width: 768px) {
-    background-color: $primary-text-color;
-    height: 30px;
-    width: 56px;
-    font-size: 14px;
-    border: 1px solid $accent-color;
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  // max-width: 3ch;
+  max-width: 52px;
+  border: 1px solid $accent-color;
+  border-radius: 0.25em;
+  padding: 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: $primary-text-color;
+  background-image: linear-gradient(
+    to top,
+    $primary-text-color,
+    $primary-white-color 33%
+  );
+
+  &:focus-within {
+    outline: 2px solid $accent-color;
   }
+}
+
+option {
+  color: $accent-color;
+  white-space: normal;
+  font-weight: 500;
 }
