@@ -2,17 +2,41 @@
   @media screen and (max-width: 768px) {
     position: fixed;
     left: 10px;
-    top: 10px;
+    top: 8px;
   }
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    top: 16px;
-    // right: 50px;
-    left: 91%;
+    top: 50px;
+    right: 165px;
+    // top: 5px;
+    // right: 68px;
   }
 
   @media print {
     display: none;
+  }
+}
+
+.change-lang {
+  width: 56px;
+  height: 32px;
+  padding: 2px;
+  border-radius: 8px;
+  // border: 3px solid $accent-color;
+  border: 2px solid transparent;
+  color: $sidebar-bg-color;
+  font-weight: 700;
+  background-color: $dots-color;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+
+  @media screen and (min-width: 768px) {
+    background-color: $primary-text-color;
+    height: 30px;
+    width: 56px;
+    font-size: 14px;
+    border: 1px solid $accent-color;
   }
 }
