@@ -20,7 +20,6 @@
     "url": "https://github.com/maryna-skrypnyk/cv-ms/issues"
   },
   "dependencies": {
-    "custom-select": "^1.1.15",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
