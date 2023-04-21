@@ -1,19 +1,24 @@
-/*toolbar*/
+.switch-container {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 10px;
+  left: 0;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
+}
+
+/*theme*/
 .toolbar {
-  @media screen and (max-width: 768px) {
-    position: fixed;
-    right: 0;
-    top: 10px;
-  }
-
-  @media screen and (min-width: 769px) {
-    position: absolute;
-    top: 50px;
-    right: 28px;
-  }
-
-  @media print {
-    display: none;
+  @media screen and (min-width: 768px) {
+    margin-left: 10px;
   }
 }
 

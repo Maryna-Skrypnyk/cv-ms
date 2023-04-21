@@ -1,4 +1,5 @@
 const aboutMe = document.querySelector('.about-me-container');
+const photoMain = document.querySelector('.js-photo');
 
 const Theme = {
   LIGHT: 'light-theme',

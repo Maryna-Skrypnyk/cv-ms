@@ -15,52 +15,24 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="select">
-      <select class="selectpicker" id="standard-select">
-        <option value="ua">UA</option>
-        <option value="en" selected>EN</option>
-      </select>
-    </div>
-    <div class="toolbar">
-        <!-- Розмітка перемикача теми -->
-        <div class="theme-switch">
-          <svg class="theme-switch__icon theme-switch__icon--sun" role="img" aria-label="Іконка сонця">
-            <use href="./images/sprite.svg#sun"></use>
-          </svg>
-
-          <div class="theme-switch__control">
-            <input
-              class="theme-switch__toggle"
-              type="checkbox"
-              name="theme"
-              id="theme-switch-toggle"
-              aria-label="Перемикач темної і світлої теми"
-            />
-            <label
-              aria-hidden="true"
-              class="theme-switch__track"
-              for="theme-switch-toggle"
-            >
-            </label>
-            <div aria-hidden="true" class="theme-switch__marker"></div>
-          </div>
-
-          <svg class="theme-switch__icon theme-switch__icon--moon" aria-label="Іконка місяця">
-            <use href="./images/sprite.svg#moon"></use>
-          </svg>
-        </div>
-      </div>
-    </div>
+    
     <!--main container-->
     <div class="wrapper">
       <!-- sidebar -->
       <aside class="sidebar">
+        <!-- Розмітка перемикача мови -->
+        <div class="select">
+          <select class="selectpicker" id="select-mob">
+            <option value="ua">UA</option>
+            <option value="en" selected>EN</option>
+          </select>
+        </div>
         <div class="info-mob">
           <h1 class="name-mob lng-name">Maryna Skrypnyk</h1>
           <h2 class="profession-mob lng-profession">Front-End Developer</h2>
         </div>
-        <img class="my-photo" src="./images/photo-1.jpg" alt="My photo" />
-
+        <img class="my-photo light-img" src="./images/photo-1.jpg" alt="My photo" />
+        <img class="my-photo dark-img" src="./images/photo-6.jpg" alt="My photo" />
         <!--contacts container-->
         <div class="contacts-container">
           <p class="personal">
@@ -210,6 +182,44 @@
 
       <!--about me container-->
       <div class="about-me-container">
+        <div class="switch-container">
+          <!-- Розмітка перемикача мови для екранів більше 767px-->
+          <div class="select">
+            <select class="selectpicker" id="standard-select">
+              <option value="ua">UA</option>
+              <option value="en" selected>EN</option>
+            </select>
+          </div>
+          <!-- Розмітка перемикача теми -->
+          <div class="toolbar">
+            <div class="theme-switch">
+              <svg class="theme-switch__icon theme-switch__icon--sun" role="img" aria-label="Іконка сонця">
+                <use href="./images/sprite.svg#sun"></use>
+              </svg>
+
+              <div class="theme-switch__control">
+                <input
+                  class="theme-switch__toggle"
+                  type="checkbox"
+                  name="theme"
+                  id="theme-switch-toggle"
+                  aria-label="Перемикач темної і світлої теми"
+                />
+                <label
+                  aria-hidden="true"
+                  class="theme-switch__track"
+                  for="theme-switch-toggle"
+                >
+                </label>
+                <div aria-hidden="true" class="theme-switch__marker"></div>
+              </div>
+
+              <svg class="theme-switch__icon theme-switch__icon--moon" aria-label="Іконка місяця">
+                <use href="./images/sprite.svg#moon"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
         <!--about me main info-->
         <div class="info-container">
           <div class="info-tablet">

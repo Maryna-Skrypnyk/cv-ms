@@ -1,5 +1,5 @@
 .about-me-container {
-  padding: 30px 30px 50px 30px;
+  padding: 10px 30px 50px 30px;
 
   &.light-theme {
     background-color: $primary-white-color;
@@ -17,11 +17,11 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 45px 40px 80px 40px;
+    padding: 10px 40px 80px 40px;
   }
 
   @media screen and (min-width: 960px) {
-    padding: 45px 50px 80px 50px;
+    padding: 10px 50px 80px 50px;
   }
 }
 

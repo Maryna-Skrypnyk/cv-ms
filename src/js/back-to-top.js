@@ -1,6 +1,6 @@
 import { addBackToTop } from 'vanilla-back-to-top';
 
-if (window.matchMedia('(max-width: 479px)').matches) {
+if (window.matchMedia('(max-width: 767px)').matches) {
   addBackToTop({
     diameter: 40,
     backgroundColor: 'rgba(177, 127, 131, .9)',
@@ -12,7 +12,7 @@ if (window.matchMedia('(max-width: 479px)').matches) {
   });
 }
 
-if (window.matchMedia('(min-width: 480px)').matches) {
+if (window.matchMedia('(min-width: 768px)').matches) {
   addBackToTop({
     diameter: 42,
     backgroundColor: 'rgba(177, 127, 131, .9)',
