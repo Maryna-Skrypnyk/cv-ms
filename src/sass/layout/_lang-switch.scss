@@ -20,22 +20,6 @@ aside .select {
   position: relative;
 }
 
-select {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 4px 8px;
-  margin: 0 auto;
-  font-family: inherit;
-  font-size: 16px;
-  cursor: pointer;
-  line-height: inherit;
-  outline: none;
-  height: 26px;
-  color: $sidebar-bg-color;
-  font-weight: 500;
-}
-
 .select.is-active .select__body {
   display: block;
 }
