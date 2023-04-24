@@ -104,8 +104,8 @@ export const langArr = {
     ua: 'Настільні ігри',
   },
   description: {
-    en: "I'm looking for a position in a company that's aimed at growth and progress together with a team. I have sound knowledge of HTML, CSS, JavaScript, and React. I studied the basics of Node.js. Besides, I gained hands-on experience in following Agile/Scrum methodology when working in a team. I'm going to develop my skills as well as grow with a team.",
-    ua: 'Шукаю позицію в компанії, націленій на ріст і прогрес разом з командою. Добре знаю HTML, CSS, JavaScript і React. Вивчала основи Node.js. Крім того, маю практичний досвід використання методології Agile/Scrum в роботі з командою. Налаштована розвивати свої навички та прогресувати разом з командою.',
+    en: "I'm looking for a position in a company that's aimed at growth and progress together with a team. I have sound knowledge of HTML, CSS, JavaScript, and React. I studied the basics of Node.js. Besides, I gained hands-on experience in following Agile/Scrum methodology when working in a team. I'm going to grow as a professional in the field of web development. I'm always open to new challenges and opportunities.",
+    ua: 'Шукаю позицію в компанії, яка націлена на ріст і прогрес разом з командою. Добре знаю HTML, CSS, JavaScript і React.js. Вивчала основи Node.js. Крім того, маю практичний досвід використання методології Agile/Scrum в роботі з командою. Налаштована розвиватися як професіонал в галузі веб-розробки. Завжди відкрита до нових викликів та можливостей.',
   },
   projects: {
     en: 'Project experience',

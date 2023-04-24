@@ -11,9 +11,13 @@
     padding: 0;
   }
 
-  .toolbar {
+  .switch-container {
     display: none;
   }
+
+  // .toolbar {
+  //   display: none;
+  // }
 
   .wrapper {
     display: flex;
@@ -49,7 +53,7 @@
 
   //main info
   .about-me-container {
-    padding: 12px 25px;
+    padding: 30px 25px;
   }
 
   .info-container {
