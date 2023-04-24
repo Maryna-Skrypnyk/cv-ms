@@ -1,0 +1,1097 @@
+// modules are defined as an array
+// [ module function, map of requires ]
+//
+// map of requires is short require name -> numeric require
+//
+// anything defined in a previous bundle is accessed via the
+// orig method which is the require for previous bundles
+
+(function (modules, entry, mainEntry, parcelRequireName, globalName) {
+  /* eslint-disable no-undef */
+  var globalObject =
+    typeof globalThis !== 'undefined'
+      ? globalThis
+      : typeof self !== 'undefined'
+      ? self
+      : typeof window !== 'undefined'
+      ? window
+      : typeof global !== 'undefined'
+      ? global
+      : {};
+  /* eslint-enable no-undef */
+
+  // Save the require from previous bundle to this closure if any
+  var previousRequire =
+    typeof globalObject[parcelRequireName] === 'function' &&
+    globalObject[parcelRequireName];
+
+  var cache = previousRequire.cache || {};
+  // Do not use `require` to prevent Webpack from trying to bundle this call
+  var nodeRequire =
+    typeof module !== 'undefined' &&
+    typeof module.require === 'function' &&
+    module.require.bind(module);
+
+  function newRequire(name, jumped) {
+    if (!cache[name]) {
+      if (!modules[name]) {
+        // if we cannot find the module within our internal map or
+        // cache jump to the current global require ie. the last bundle
+        // that was added to the page.
+        var currentRequire =
+          typeof globalObject[parcelRequireName] === 'function' &&
+          globalObject[parcelRequireName];
+        if (!jumped && currentRequire) {
+          return currentRequire(name, true);
+        }
+
+        // If there are other bundles on this page the require from the
+        // previous one is saved to 'previousRequire'. Repeat this as
+        // many times as there are bundles until the module is found or
+        // we exhaust the require chain.
+        if (previousRequire) {
+          return previousRequire(name, true);
+        }
+
+        // Try the node require function if it exists.
+        if (nodeRequire && typeof name === 'string') {
+          return nodeRequire(name);
+        }
+
+        var err = new Error("Cannot find module '" + name + "'");
+        err.code = 'MODULE_NOT_FOUND';
+        throw err;
+      }
+
+      localRequire.resolve = resolve;
+      localRequire.cache = {};
+
+      var module = (cache[name] = new newRequire.Module(name));
+
+      modules[name][0].call(
+        module.exports,
+        localRequire,
+        module,
+        module.exports,
+        this
+      );
+    }
+
+    return cache[name].exports;
+
+    function localRequire(x) {
+      var res = localRequire.resolve(x);
+      return res === false ? {} : newRequire(res);
+    }
+
+    function resolve(x) {
+      var id = modules[name][1][x];
+      return id != null ? id : x;
+    }
+  }
+
+  function Module(moduleName) {
+    this.id = moduleName;
+    this.bundle = newRequire;
+    this.exports = {};
+  }
+
+  newRequire.isParcelRequire = true;
+  newRequire.Module = Module;
+  newRequire.modules = modules;
+  newRequire.cache = cache;
+  newRequire.parent = previousRequire;
+  newRequire.register = function (id, exports) {
+    modules[id] = [
+      function (require, module) {
+        module.exports = exports;
+      },
+      {},
+    ];
+  };
+
+  Object.defineProperty(newRequire, 'root', {
+    get: function () {
+      return globalObject[parcelRequireName];
+    },
+  });
+
+  globalObject[parcelRequireName] = newRequire;
+
+  for (var i = 0; i < entry.length; i++) {
+    newRequire(entry[i]);
+  }
+
+  if (mainEntry) {
+    // Expose entry point to Node, AMD or browser globals
+    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
+    var mainExports = newRequire(mainEntry);
+
+    // CommonJS
+    if (typeof exports === 'object' && typeof module !== 'undefined') {
+      module.exports = mainExports;
+
+      // RequireJS
+    } else if (typeof define === 'function' && define.amd) {
+      define(function () {
+        return mainExports;
+      });
+
+      // <script>
+    } else if (globalName) {
+      this[globalName] = mainExports;
+    }
+  }
+})({"jC2qd":[function(require,module,exports) {
+var global = arguments[3];
+var HMR_HOST = null;
+var HMR_PORT = null;
+var HMR_SECURE = false;
+var HMR_ENV_HASH = "d6ea1d42532a7575";
+module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+"use strict";
+/* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
+import type {
+  HMRAsset,
+  HMRMessage,
+} from '@parcel/reporter-dev-server/src/HMRServer.js';
+interface ParcelRequire {
+  (string): mixed;
+  cache: {|[string]: ParcelModule|};
+  hotData: {|[string]: mixed|};
+  Module: any;
+  parent: ?ParcelRequire;
+  isParcelRequire: true;
+  modules: {|[string]: [Function, {|[string]: string|}]|};
+  HMR_BUNDLE_ID: string;
+  root: ParcelRequire;
+}
+interface ParcelModule {
+  hot: {|
+    data: mixed,
+    accept(cb: (Function) => void): void,
+    dispose(cb: (mixed) => void): void,
+    // accept(deps: Array<string> | string, cb: (Function) => void): void,
+    // decline(): void,
+    _acceptCallbacks: Array<(Function) => void>,
+    _disposeCallbacks: Array<(mixed) => void>,
+  |};
+}
+interface ExtensionContext {
+  runtime: {|
+    reload(): void,
+    getURL(url: string): string;
+    getManifest(): {manifest_version: number, ...};
+  |};
+}
+declare var module: {bundle: ParcelRequire, ...};
+declare var HMR_HOST: string;
+declare var HMR_PORT: string;
+declare var HMR_ENV_HASH: string;
+declare var HMR_SECURE: boolean;
+declare var chrome: ExtensionContext;
+declare var browser: ExtensionContext;
+declare var __parcel__import__: (string) => Promise<void>;
+declare var __parcel__importScripts__: (string) => Promise<void>;
+declare var globalThis: typeof self;
+declare var ServiceWorkerGlobalScope: Object;
+*/ var OVERLAY_ID = "__parcel__error__overlay__";
+var OldModule = module.bundle.Module;
+function Module(moduleName) {
+    OldModule.call(this, moduleName);
+    this.hot = {
+        data: module.bundle.hotData[moduleName],
+        _acceptCallbacks: [],
+        _disposeCallbacks: [],
+        accept: function(fn) {
+            this._acceptCallbacks.push(fn || function() {});
+        },
+        dispose: function(fn) {
+            this._disposeCallbacks.push(fn);
+        }
+    };
+    module.bundle.hotData[moduleName] = undefined;
+}
+module.bundle.Module = Module;
+module.bundle.hotData = {};
+var checkedAssets, assetsToDispose, assetsToAccept /*: Array<[ParcelRequire, string]> */ ;
+function getHostname() {
+    return HMR_HOST || (location.protocol.indexOf("http") === 0 ? location.hostname : "localhost");
+}
+function getPort() {
+    return HMR_PORT || location.port;
+} // eslint-disable-next-line no-redeclare
+var parent = module.bundle.parent;
+if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
+    var hostname = getHostname();
+    var port = getPort();
+    var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
+    var ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/"); // Web extension context
+    var extCtx = typeof chrome === "undefined" ? typeof browser === "undefined" ? null : browser : chrome; // Safari doesn't support sourceURL in error stacks.
+    // eval may also be disabled via CSP, so do a quick check.
+    var supportsSourceURL = false;
+    try {
+        (0, eval)('throw new Error("test"); //# sourceURL=test.js');
+    } catch (err) {
+        supportsSourceURL = err.stack.includes("test.js");
+    } // $FlowFixMe
+    ws.onmessage = async function(event) {
+        checkedAssets = {} /*: {|[string]: boolean|} */ ;
+        assetsToAccept = [];
+        assetsToDispose = [];
+        var data = JSON.parse(event.data);
+        if (data.type === "update") {
+            // Remove error overlay if there is one
+            if (typeof document !== "undefined") removeErrorOverlay();
+            let assets = data.assets.filter((asset)=>asset.envHash === HMR_ENV_HASH); // Handle HMR Update
+            let handled = assets.every((asset)=>{
+                return asset.type === "css" || asset.type === "js" && hmrAcceptCheck(module.bundle.root, asset.id, asset.depsByBundle);
+            });
+            if (handled) {
+                console.clear(); // Dispatch custom event so other runtimes (e.g React Refresh) are aware.
+                if (typeof window !== "undefined" && typeof CustomEvent !== "undefined") window.dispatchEvent(new CustomEvent("parcelhmraccept"));
+                await hmrApplyUpdates(assets); // Dispose all old assets.
+                let processedAssets = {} /*: {|[string]: boolean|} */ ;
+                for(let i = 0; i < assetsToDispose.length; i++){
+                    let id = assetsToDispose[i][1];
+                    if (!processedAssets[id]) {
+                        hmrDispose(assetsToDispose[i][0], id);
+                        processedAssets[id] = true;
+                    }
+                } // Run accept callbacks. This will also re-execute other disposed assets in topological order.
+                processedAssets = {};
+                for(let i = 0; i < assetsToAccept.length; i++){
+                    let id = assetsToAccept[i][1];
+                    if (!processedAssets[id]) {
+                        hmrAccept(assetsToAccept[i][0], id);
+                        processedAssets[id] = true;
+                    }
+                }
+            } else fullReload();
+        }
+        if (data.type === "error") {
+            // Log parcel errors to console
+            for (let ansiDiagnostic of data.diagnostics.ansi){
+                let stack = ansiDiagnostic.codeframe ? ansiDiagnostic.codeframe : ansiDiagnostic.stack;
+                console.error("\uD83D\uDEA8 [parcel]: " + ansiDiagnostic.message + "\n" + stack + "\n\n" + ansiDiagnostic.hints.join("\n"));
+            }
+            if (typeof document !== "undefined") {
+                // Render the fancy html overlay
+                removeErrorOverlay();
+                var overlay = createErrorOverlay(data.diagnostics.html); // $FlowFixMe
+                document.body.appendChild(overlay);
+            }
+        }
+    };
+    ws.onerror = function(e) {
+        console.error(e.message);
+    };
+    ws.onclose = function() {
+        console.warn("[parcel] \uD83D\uDEA8 Connection to the HMR server was lost");
+    };
+}
+function removeErrorOverlay() {
+    var overlay = document.getElementById(OVERLAY_ID);
+    if (overlay) {
+        overlay.remove();
+        console.log("[parcel] ✨ Error resolved");
+    }
+}
+function createErrorOverlay(diagnostics) {
+    var overlay = document.createElement("div");
+    overlay.id = OVERLAY_ID;
+    let errorHTML = '<div style="background: black; opacity: 0.85; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; font-family: Menlo, Consolas, monospace; z-index: 9999;">';
+    for (let diagnostic of diagnostics){
+        let stack = diagnostic.frames.length ? diagnostic.frames.reduce((p, frame)=>{
+            return `${p}
+<a href="/__parcel_launch_editor?file=${encodeURIComponent(frame.location)}" style="text-decoration: underline; color: #888" onclick="fetch(this.href); return false">${frame.location}</a>
+${frame.code}`;
+        }, "") : diagnostic.stack;
+        errorHTML += `
+      <div>
+        <div style="font-size: 18px; font-weight: bold; margin-top: 20px;">
+          🚨 ${diagnostic.message}
+        </div>
+        <pre>${stack}</pre>
+        <div>
+          ${diagnostic.hints.map((hint)=>"<div>\uD83D\uDCA1 " + hint + "</div>").join("")}
+        </div>
+        ${diagnostic.documentation ? `<div>📝 <a style="color: violet" href="${diagnostic.documentation}" target="_blank">Learn more</a></div>` : ""}
+      </div>
+    `;
+    }
+    errorHTML += "</div>";
+    overlay.innerHTML = errorHTML;
+    return overlay;
+}
+function fullReload() {
+    if ("reload" in location) location.reload();
+    else if (extCtx && extCtx.runtime && extCtx.runtime.reload) extCtx.runtime.reload();
+}
+function getParents(bundle, id) /*: Array<[ParcelRequire, string]> */ {
+    var modules = bundle.modules;
+    if (!modules) return [];
+    var parents = [];
+    var k, d, dep;
+    for(k in modules)for(d in modules[k][1]){
+        dep = modules[k][1][d];
+        if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) parents.push([
+            bundle,
+            k
+        ]);
+    }
+    if (bundle.parent) parents = parents.concat(getParents(bundle.parent, id));
+    return parents;
+}
+function updateLink(link) {
+    var newLink = link.cloneNode();
+    newLink.onload = function() {
+        if (link.parentNode !== null) // $FlowFixMe
+        link.parentNode.removeChild(link);
+    };
+    newLink.setAttribute("href", link.getAttribute("href").split("?")[0] + "?" + Date.now()); // $FlowFixMe
+    link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+    if (cssTimeout) return;
+    cssTimeout = setTimeout(function() {
+        var links = document.querySelectorAll('link[rel="stylesheet"]');
+        for(var i = 0; i < links.length; i++){
+            // $FlowFixMe[incompatible-type]
+            var href = links[i].getAttribute("href");
+            var hostname = getHostname();
+            var servedFromHMRServer = hostname === "localhost" ? new RegExp("^(https?:\\/\\/(0.0.0.0|127.0.0.1)|localhost):" + getPort()).test(href) : href.indexOf(hostname + ":" + getPort());
+            var absolute = /^https?:\/\//i.test(href) && href.indexOf(location.origin) !== 0 && !servedFromHMRServer;
+            if (!absolute) updateLink(links[i]);
+        }
+        cssTimeout = null;
+    }, 50);
+}
+function hmrDownload(asset) {
+    if (asset.type === "js") {
+        if (typeof document !== "undefined") {
+            let script = document.createElement("script");
+            script.src = asset.url + "?t=" + Date.now();
+            if (asset.outputFormat === "esmodule") script.type = "module";
+            return new Promise((resolve, reject)=>{
+                var _document$head;
+                script.onload = ()=>resolve(script);
+                script.onerror = reject;
+                (_document$head = document.head) === null || _document$head === void 0 || _document$head.appendChild(script);
+            });
+        } else if (typeof importScripts === "function") {
+            // Worker scripts
+            if (asset.outputFormat === "esmodule") return import(asset.url + "?t=" + Date.now());
+            else return new Promise((resolve, reject)=>{
+                try {
+                    importScripts(asset.url + "?t=" + Date.now());
+                    resolve();
+                } catch (err) {
+                    reject(err);
+                }
+            });
+        }
+    }
+}
+async function hmrApplyUpdates(assets) {
+    global.parcelHotUpdate = Object.create(null);
+    let scriptsToRemove;
+    try {
+        // If sourceURL comments aren't supported in eval, we need to load
+        // the update from the dev server over HTTP so that stack traces
+        // are correct in errors/logs. This is much slower than eval, so
+        // we only do it if needed (currently just Safari).
+        // https://bugs.webkit.org/show_bug.cgi?id=137297
+        // This path is also taken if a CSP disallows eval.
+        if (!supportsSourceURL) {
+            let promises = assets.map((asset)=>{
+                var _hmrDownload;
+                return (_hmrDownload = hmrDownload(asset)) === null || _hmrDownload === void 0 ? void 0 : _hmrDownload.catch((err)=>{
+                    // Web extension bugfix for Chromium
+                    // https://bugs.chromium.org/p/chromium/issues/detail?id=1255412#c12
+                    if (extCtx && extCtx.runtime && extCtx.runtime.getManifest().manifest_version == 3) {
+                        if (typeof ServiceWorkerGlobalScope != "undefined" && global instanceof ServiceWorkerGlobalScope) {
+                            extCtx.runtime.reload();
+                            return;
+                        }
+                        asset.url = extCtx.runtime.getURL("/__parcel_hmr_proxy__?url=" + encodeURIComponent(asset.url + "?t=" + Date.now()));
+                        return hmrDownload(asset);
+                    }
+                    throw err;
+                });
+            });
+            scriptsToRemove = await Promise.all(promises);
+        }
+        assets.forEach(function(asset) {
+            hmrApply(module.bundle.root, asset);
+        });
+    } finally{
+        delete global.parcelHotUpdate;
+        if (scriptsToRemove) scriptsToRemove.forEach((script)=>{
+            if (script) {
+                var _document$head2;
+                (_document$head2 = document.head) === null || _document$head2 === void 0 || _document$head2.removeChild(script);
+            }
+        });
+    }
+}
+function hmrApply(bundle, asset) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (asset.type === "css") reloadCSS();
+    else if (asset.type === "js") {
+        let deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
+        if (deps) {
+            if (modules[asset.id]) {
+                // Remove dependencies that are removed and will become orphaned.
+                // This is necessary so that if the asset is added back again, the cache is gone, and we prevent a full page reload.
+                let oldDeps = modules[asset.id][1];
+                for(let dep in oldDeps)if (!deps[dep] || deps[dep] !== oldDeps[dep]) {
+                    let id = oldDeps[dep];
+                    let parents = getParents(module.bundle.root, id);
+                    if (parents.length === 1) hmrDelete(module.bundle.root, id);
+                }
+            }
+            if (supportsSourceURL) // Global eval. We would use `new Function` here but browser
+            // support for source maps is better with eval.
+            (0, eval)(asset.output);
+             // $FlowFixMe
+            let fn = global.parcelHotUpdate[asset.id];
+            modules[asset.id] = [
+                fn,
+                deps
+            ];
+        } else if (bundle.parent) hmrApply(bundle.parent, asset);
+    }
+}
+function hmrDelete(bundle, id) {
+    let modules = bundle.modules;
+    if (!modules) return;
+    if (modules[id]) {
+        // Collect dependencies that will become orphaned when this module is deleted.
+        let deps = modules[id][1];
+        let orphans = [];
+        for(let dep in deps){
+            let parents = getParents(module.bundle.root, deps[dep]);
+            if (parents.length === 1) orphans.push(deps[dep]);
+        } // Delete the module. This must be done before deleting dependencies in case of circular dependencies.
+        delete modules[id];
+        delete bundle.cache[id]; // Now delete the orphans.
+        orphans.forEach((id)=>{
+            hmrDelete(module.bundle.root, id);
+        });
+    } else if (bundle.parent) hmrDelete(bundle.parent, id);
+}
+function hmrAcceptCheck(bundle, id, depsByBundle) {
+    if (hmrAcceptCheckOne(bundle, id, depsByBundle)) return true;
+     // Traverse parents breadth first. All possible ancestries must accept the HMR update, or we'll reload.
+    let parents = getParents(module.bundle.root, id);
+    let accepted = false;
+    while(parents.length > 0){
+        let v = parents.shift();
+        let a = hmrAcceptCheckOne(v[0], v[1], null);
+        if (a) // If this parent accepts, stop traversing upward, but still consider siblings.
+        accepted = true;
+        else {
+            // Otherwise, queue the parents in the next level upward.
+            let p = getParents(module.bundle.root, v[1]);
+            if (p.length === 0) {
+                // If there are no parents, then we've reached an entry without accepting. Reload.
+                accepted = false;
+                break;
+            }
+            parents.push(...p);
+        }
+    }
+    return accepted;
+}
+function hmrAcceptCheckOne(bundle, id, depsByBundle) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (depsByBundle && !depsByBundle[bundle.HMR_BUNDLE_ID]) {
+        // If we reached the root bundle without finding where the asset should go,
+        // there's nothing to do. Mark as "accepted" so we don't reload the page.
+        if (!bundle.parent) return true;
+        return hmrAcceptCheck(bundle.parent, id, depsByBundle);
+    }
+    if (checkedAssets[id]) return true;
+    checkedAssets[id] = true;
+    var cached = bundle.cache[id];
+    assetsToDispose.push([
+        bundle,
+        id
+    ]);
+    if (!cached || cached.hot && cached.hot._acceptCallbacks.length) {
+        assetsToAccept.push([
+            bundle,
+            id
+        ]);
+        return true;
+    }
+}
+function hmrDispose(bundle, id) {
+    var cached = bundle.cache[id];
+    bundle.hotData[id] = {};
+    if (cached && cached.hot) cached.hot.data = bundle.hotData[id];
+    if (cached && cached.hot && cached.hot._disposeCallbacks.length) cached.hot._disposeCallbacks.forEach(function(cb) {
+        cb(bundle.hotData[id]);
+    });
+    delete bundle.cache[id];
+}
+function hmrAccept(bundle, id) {
+    // Execute the module.
+    bundle(id); // Run the accept callbacks in the new version of the module.
+    var cached = bundle.cache[id];
+    if (cached && cached.hot && cached.hot._acceptCallbacks.length) cached.hot._acceptCallbacks.forEach(function(cb) {
+        var assetsToAlsoAccept = cb(function() {
+            return getParents(module.bundle.root, id);
+        });
+        if (assetsToAlsoAccept && assetsToAccept.length) {
+            assetsToAlsoAccept.forEach(function(a) {
+                hmrDispose(a[0], a[1]);
+            }); // $FlowFixMe[method-unbinding]
+            assetsToAccept.push.apply(assetsToAccept, assetsToAlsoAccept);
+        }
+    });
+}
+
+},{}],"8lqZg":[function(require,module,exports) {
+var _themeSwitcherJs = require("./js/theme-switcher.js");
+var _langSwitcherJs = require("./js/lang-switcher.js");
+var _backToTopJs = require("./js/back-to-top.js"); // import './js/lang-data.js';
+
+},{"./js/theme-switcher.js":"a2DLE","./js/lang-switcher.js":"betTe","./js/back-to-top.js":"hIZlk"}],"a2DLE":[function(require,module,exports) {
+const aboutMe = document.querySelector(".about-me-container");
+const Theme = {
+    LIGHT: "light-theme",
+    DARK: "dark-theme"
+};
+const THEME_KEY = "theme";
+const themeRef = document.querySelector("#theme-switch-toggle");
+themeRef.addEventListener("change", onThemeChange);
+function onThemeChange(e) {
+    if (e.target.checked) replaceTheme(Theme.LIGHT, Theme.DARK);
+    else replaceTheme(Theme.DARK, Theme.LIGHT);
+}
+function replaceTheme(oldTheme, newTheme) {
+    document.body.classList.replace(oldTheme, newTheme);
+    aboutMe.classList.add(newTheme);
+    aboutMe.classList.remove(oldTheme);
+    localStorage.setItem(THEME_KEY, newTheme);
+}
+function savedTheme() {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme) {
+        document.body.classList.value = savedTheme;
+        aboutMe.classList.add(savedTheme);
+        themeRef.checked = savedTheme === Theme.DARK;
+    // if (savedTheme === Theme.DARK) {
+    //   themeRef.checked = true;
+    // }
+    } else {
+        document.body.classList = Theme.LIGHT;
+        aboutMe.classList.add(Theme.LIGHT);
+    }
+}
+savedTheme();
+
+},{}],"betTe":[function(require,module,exports) {
+var _langDataJs = require("./lang-data.js");
+const selectMob = document.getElementById("select-mob");
+const select = document.getElementById("standard-select");
+const allLang = [
+    "en",
+    "ua"
+];
+selectMob.addEventListener("change", changeURLLanguageMob);
+select.addEventListener("change", changeURLLanguage);
+// перенаправлення на url з індикатором мови
+function changeURLLanguageMob() {
+    let lang = selectMob.value;
+    location.href = window.location.pathname + "#" + lang;
+    location.reload();
+}
+function changeURLLanguage() {
+    let lang = select.value;
+    location.href = window.location.pathname + "#" + lang;
+    location.reload();
+}
+function changeLanguage() {
+    let hash = window.location.hash;
+    hash = hash.substring(1);
+    if (!allLang.includes(hash)) {
+        location.href = window.location.pathname + "#en";
+        location.reload();
+    }
+    select.value = hash;
+    selectMob.value = hash;
+    document.querySelector("title").innerHTML = (0, _langDataJs.langArr)["title"][hash];
+    for(let key in 0, _langDataJs.langArr){
+        // let elem = document.querySelector('.lng-' + key);
+        let elemAll = document.querySelectorAll(".lng-" + key);
+        console.log(elemAll);
+        // if (elem) {
+        //   elem.innerHTML = langArr[key][hash];
+        // }
+        if (elemAll.length > 0) elemAll.forEach((el)=>{
+            if ((0, _langDataJs.langArr)[key][hash]) el.innerHTML = (0, _langDataJs.langArr)[key][hash];
+            el.innerHTML = (0, _langDataJs.langArr)[key]["en"];
+        });
+    }
+}
+changeLanguage();
+
+},{"./lang-data.js":"4AyE3"}],"4AyE3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "langArr", ()=>langArr);
+const langArr = {
+    title: {
+        en: "CV_Maryna S.",
+        ua: "Марина Скрипник"
+    },
+    name: {
+        en: "Maryna Skrypnyk"
+    },
+    profession: {
+        en: "Front-End Developer",
+        ua: "Front-End розробник"
+    },
+    fullStack: {
+        en: "Full Stack Developer",
+        ua: "Full Stack розробник"
+    },
+    dob: {
+        en: "DOB:",
+        ua: "ДН:"
+    },
+    kyiv: {
+        en: "Kyiv",
+        ua: "Київ"
+    },
+    ukraine: {
+        en: "Ukraine",
+        ua: "Україна"
+    },
+    contacts: {
+        en: "Contacts",
+        ua: "Контакти"
+    },
+    technical: {
+        en: "Technical Skills",
+        ua: "Технічні навички"
+    },
+    soft: {
+        en: "Soft Skills",
+        ua: "Особисті якості"
+    },
+    proactive: {
+        en: "Proactive",
+        ua: "Проактивність"
+    },
+    motivation: {
+        en: "Extreme self-motivation",
+        ua: "Надзвичайна самомотивація"
+    },
+    enthusiasm: {
+        en: "Enthusiasm and dedication",
+        ua: "Ентузіазм і відданість"
+    },
+    details: {
+        en: "A pretty good eye for details",
+        ua: "Уважність до деталей"
+    },
+    outgoing: {
+        en: "Outgoing",
+        ua: "Товариськість, привітність"
+    },
+    languages: {
+        en: "Languages",
+        ua: "Знання мов"
+    },
+    ukrainian: {
+        en: "Ukrainian",
+        ua: "Українська"
+    },
+    english: {
+        en: "English",
+        ua: "Англійська"
+    },
+    native: {
+        en: "Native",
+        ua: "рідна"
+    },
+    preInt: {
+        en: "Pre-Intermediate",
+        ua: "середній рівень"
+    },
+    dotsUkrainian: {
+        en: " .......... ",
+        ua: " ...... "
+    },
+    dotsEnglish: {
+        en: " ................ ",
+        ua: " ...... "
+    },
+    interests: {
+        en: "Interests",
+        ua: "Інтереси"
+    },
+    fitness: {
+        en: "Fitness",
+        ua: "Фітнес"
+    },
+    reading: {
+        en: "Reading",
+        ua: "Читання"
+    },
+    games: {
+        en: "Board games",
+        ua: "Настільні ігри"
+    },
+    description: {
+        en: "I'm looking for a position in a company that's aimed at growth and progress together with a team. I have sound knowledge of HTML, CSS, JavaScript, and React. I studied the basics of Node.js. Besides, I gained hands-on experience in following Agile/Scrum methodology when working in a team. I'm going to develop my skills as well as grow with a team.",
+        ua: "Шукаю позицію в компанії, націленій на ріст і прогрес разом з командою. Добре знаю HTML, CSS, JavaScript і React. Вивчала основи Node.js. Крім того, маю практичний досвід використання методології Agile/Scrum в роботі з командою. Налаштована розвивати свої навички та прогресувати разом з командою."
+    },
+    projects: {
+        en: "Project experience",
+        ua: "Проекти"
+    },
+    aboutProject: {
+        en: "About the project:",
+        ua: "Проект:"
+    },
+    tasks: {
+        en: "My tasks:",
+        ua: "Мої завдання:"
+    },
+    role: {
+        en: "My role:",
+        ua: "Моя роль:"
+    },
+    icecream: {
+        en: "Ice Cream",
+        ua: "Морозиво"
+    },
+    dotsIcecream: {
+        en: "............................",
+        ua: "..................................."
+    },
+    aboutIcecream: {
+        en: "mobile-first adaptive and responsive landing page to introduce ice cream products and attract clients.",
+        ua: "mobile-first адаптивна та відгучна лендінг-сторінка для представлення продуктів морозива та залучення клієнтів."
+    },
+    icecreamTask: {
+        en: "layout of sections Advantages, Gallery, Customer reviews. Coordination of team.",
+        ua: "реалізувала розмітки секцій Advantages, Gallery, Customer reviews. Координувала командну роботу з кодування."
+    },
+    filmoteka: {
+        en: "Filmoteka",
+        ua: "Фільмотека"
+    },
+    dotsFilmoteka: {
+        en: ".............................",
+        ua: "..............................."
+    },
+    aboutFilmoteka: {
+        en: "application for choosing a movie with the ability to add movies to the library.",
+        ua: "додаток для вибору фільму, з можливістю додавання/видалення фільмів у бібліотеку обраних і/або переглянутих."
+    },
+    filmotekaTask: {
+        en: "responsible for sections My Library, Header. Coordination of team tasks.",
+        ua: "реалізувала секції My Library, Header. Координувала командні завдання."
+    },
+    phonebook: {
+        en: "Phonebook",
+        ua: "Телефонна книга"
+    },
+    dotsPhonebook: {
+        en: ".........................",
+        ua: "..............."
+    },
+    aboutPhonebook: {
+        en: "web app with authorization, profile page, ability to add, update and remove contacts, and existing contacts filter.",
+        ua: "mobile-first адаптивний та відгучний веб-додаток з авторизацією, сторінкою профілю, можливістю додавання нових контактів, редагуванням, видаленням і фільтром існуючих."
+    },
+    phonebookTask: {
+        en: "development of a front-end application on react.",
+        ua: "розробила front-end додаток на React.js"
+    },
+    wallet: {
+        en: "Wallet",
+        ua: "Гаманець"
+    },
+    dotsWallet: {
+        en: ".......................................",
+        ua: "......................................"
+    },
+    aboutWallet: {
+        en: "web app with authorization, ability to add transactions for the wallet, and display statistics on expenses filtered by month and year.",
+        ua: "додаток з авторизацією, можливістю додавання транзакцій для гаманця та відображення статистики витрат за місяцями та роками."
+    },
+    walletTask: {
+        en: "responsible for authorization, adding transactions by the user on the frontend side, routing, and connecting to the backend. Also implemented logout functionality, modals, and other components.",
+        ua: "відповідала за авторизацію, додавання транзакцій користувачем на стороні інтерфейсу, маршрутизацію, підключення до бекенда. Також, реалізувала функцію виходу з системи, модальні та інші компоненти."
+    },
+    individual: {
+        en: "individual project",
+        ua: "індивідуальний проект"
+    },
+    team: {
+        en: "team project",
+        ua: "командний проект"
+    },
+    work: {
+        en: "Work experience",
+        ua: "Досвід роботи"
+    },
+    expertActivity: {
+        en: "Independent forensic expert activity",
+        ua: "Незалежна судово-експертна діяльність"
+    },
+    ersu: {
+        en: "\xabExpert Research Service of Ukraine, Limited Liability Company\xbb",
+        ua: "ТОВ \xabЕкспертно-дослідна служба України\xbb"
+    },
+    bankingActivity: {
+        en: "Banking activity",
+        ua: "Банківська діяльність"
+    },
+    vtb: {
+        en: "\xabVTB Bank\xbb Public Joint Stock company",
+        ua: "АТ \xabВТБ Банк\xbb"
+    },
+    ukrsotsbank: {
+        en: "\xabUkrsotsbank\xbb Joint-stock Commercial Bank",
+        ua: "АТ \xabУкрсоцбанк\xbb"
+    },
+    leadEconomist: {
+        en: "Lead Economist",
+        ua: "Провідний економіст"
+    },
+    upToNow: {
+        en: "up to now",
+        ua: "до тепер"
+    },
+    education: {
+        en: "Education",
+        ua: "Освіта"
+    },
+    additionalEducation: {
+        en: "Additional Education",
+        ua: "Додаткова освіта"
+    },
+    kneu: {
+        en: "Kyiv National Economic University",
+        ua: "Київський національний економічний університет ім. В. Гетьмана"
+    },
+    management: {
+        en: "Management of entrepreneurship",
+        ua: "Менеджмент підприємницької діяльності"
+    },
+    dotsManagement: {
+        en: " ..................... ",
+        ua: " ................. "
+    },
+    dotsBachelor: {
+        en: " ................................................. ",
+        ua: " ...................................................................... "
+    },
+    magister: {
+        en: "Magister of Economics",
+        ua: "Магістр економіки"
+    },
+    bachelor: {
+        en: "Bachelor of Economics, teacher of economics",
+        ua: "Бакалавр економіки, викладач економіки"
+    },
+    enterprises: {
+        en: "Economic of enterprises",
+        ua: "Економіка підприємств"
+    },
+    completed: {
+        en: "Completed a 9-month course on front-end and a 2-month course on back-end.",
+        ua: "Завершила 9-місячний курс front-end та 2-місячний курс back-end розробки."
+    },
+    learned: {
+        en: "Learned the workings of JavaScript, React.js, HTML, CSS, and others.",
+        ua: "Навчилась працювати з JavaScript, React.js, HTML, CSS та з іншими технологіями."
+    },
+    vsc: {
+        en: "Became familiar with using popular coding technology such as Visual Studio Code.",
+        ua: "Ознайомилась з використанням популярної технології кодування Visual Studio Code."
+    },
+    built: {
+        en: "Built several web applications using the technologies above. Three of them are team projects.",
+        ua: "Створила кілька веб-додатків, використовуючи вищезазначені технології, з яких три – це командні проекти."
+    },
+    providedExpertise: {
+        en: "Provided expertise for court or out-of-court. I wrote over 100 credit expertise reports.",
+        ua: "Надала експертизу для судового та позасудового розгляду. Написала понад 100 звітів кредитної експертизи."
+    },
+    managedExpertise: {
+        en: "Managed content and created content marketing. I wrote over 50 specialized publications and articles, which I posted on the web and social networks.",
+        ua: "Керувала контентом і створювала маркетинговий контент. Написала понад 50 спеціалізованих публікацій і статей, які розміщувала в Інтернеті та соціальних мережах."
+    },
+    customer: {
+        en: "Provided full customer support services.",
+        ua: "Надавала повний спектр послуг підтримки клієнтів."
+    },
+    calculation: {
+        en: "Developed a calculation system in Excel and adapted it for the majority of credit expertise reports.",
+        ua: "Розробила систему розрахунків в Excel та адаптувала її для більшості звітів кредитної експертизи."
+    },
+    analyzedCourt: {
+        en: "Analyzed versatile court decisions from various instances.",
+        ua: "Проаналізувала різноманітні судові рішення різних інстанцій."
+    },
+    certification: {
+        en: 'Completed the certification in the Ministry of Justice of Ukraine as an independent forensic expert, specialty "Research of documents of financial and credit transactions".',
+        ua: "Пройшла атестацію в Міністерстві юстиції України на звання незалежного судового експерта зі спеціальності \xabДослідження документів фінансово-кредитних операцій\xbb."
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"hIZlk":[function(require,module,exports) {
+var _vanillaBackToTop = require("vanilla-back-to-top");
+if (window.matchMedia("(max-width: 767px)").matches) (0, _vanillaBackToTop.addBackToTop)({
+    diameter: 40,
+    backgroundColor: "rgba(177, 127, 131, .9)",
+    innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+    textColor: "#fff",
+    scrollDuration: 250,
+    cornerOffset: 10
+});
+if (window.matchMedia("(min-width: 768px)").matches) (0, _vanillaBackToTop.addBackToTop)({
+    diameter: 42,
+    backgroundColor: "rgba(177, 127, 131, .9)",
+    innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+    textColor: "#fff",
+    scrollDuration: 250,
+    cornerOffset: 44
+});
+
+},{"vanilla-back-to-top":"d93Zy"}],"d93Zy":[function(require,module,exports) {
+"use strict";
+function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof(obj) {
+        return typeof obj;
+    };
+    else _typeof = function _typeof(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+(function(root, factory) {
+    if (typeof define === "function" && define.amd) define([
+        "exports"
+    ], factory);
+    else if (_typeof(exports) === "object" && typeof exports.nodeName !== "string") factory(exports);
+    else factory(root.commonJsStrict = {});
+})(typeof self !== "undefined" ? self : void 0, function(exports1) {
+    exports1.addBackToTop = addBackToTop; // FUNCTION START
+    "use strict";
+    function addBackToTop() {
+        var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        var _params$backgroundCol = params.backgroundColor, backgroundColor = _params$backgroundCol === void 0 ? "#000" : _params$backgroundCol, _params$cornerOffset = params.cornerOffset, cornerOffset = _params$cornerOffset === void 0 ? 20 : _params$cornerOffset, _params$diameter = params.diameter, diameter = _params$diameter === void 0 ? 56 : _params$diameter, _params$ease = params.ease, ease = _params$ease === void 0 ? inOutSine : _params$ease, _params$id = params.id, id = _params$id === void 0 ? "back-to-top" : _params$id, _params$innerHTML = params.innerHTML, innerHTML = _params$innerHTML === void 0 ? '<svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>' : _params$innerHTML, _params$onClickScroll = params.onClickScrollTo, onClickScrollTo = _params$onClickScroll === void 0 ? 0 : _params$onClickScroll, _params$scrollContain = params.scrollContainer, scrollContainer = _params$scrollContain === void 0 ? document.body : _params$scrollContain, _params$scrollDuratio = params.scrollDuration, scrollDuration = _params$scrollDuratio === void 0 ? 100 : _params$scrollDuratio, _params$showWhenScrol = params.showWhenScrollTopIs, showWhenScrollTopIs = _params$showWhenScrol === void 0 ? 1 : _params$showWhenScrol, _params$size = params.size, size = _params$size === void 0 ? diameter : _params$size, _params$textColor = params.textColor, textColor = _params$textColor === void 0 ? "#fff" : _params$textColor, _params$zIndex = params.zIndex, zIndex = _params$zIndex === void 0 ? 1 : _params$zIndex;
+        var scrollContainerIsBody = scrollContainer === document.body;
+        var scrollDocumentElement = scrollContainerIsBody && document.documentElement;
+        appendStyles();
+        var upEl = appendElement();
+        var hidden = true;
+        var scrollEmitter = scrollContainerIsBody ? window : scrollContainer;
+        scrollEmitter.addEventListener("scroll", adapt);
+        adapt();
+        function adapt() {
+            getScrollTop() >= showWhenScrollTopIs ? show() : hide();
+        }
+        function show() {
+            if (!hidden) return;
+            upEl.className = "";
+            hidden = false;
+        }
+        function hide() {
+            if (hidden) return;
+            upEl.className = "hidden";
+            hidden = true;
+        }
+        function appendElement() {
+            var upEl = document.createElement("div");
+            upEl.id = id;
+            upEl.className = "hidden";
+            upEl.innerHTML = innerHTML;
+            upEl.addEventListener("click", function(event) {
+                event.preventDefault();
+                scrollUp();
+            });
+            document.body.appendChild(upEl);
+            return upEl;
+        }
+        function appendStyles() {
+            var svgSize = Math.round(0.43 * size);
+            var svgTop = Math.round(0.29 * size);
+            var styles = "#" + id + "{background:" + backgroundColor + ";-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;bottom:" + cornerOffset + "px;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);-moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:" + textColor + ";cursor:pointer;display:block;height:" + size + "px;opacity:1;outline:0;position:fixed;right:" + cornerOffset + "px;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-transition:bottom .2s,opacity .2s;-o-transition:bottom .2s,opacity .2s;-moz-transition:bottom .2s,opacity .2s;transition:bottom .2s,opacity .2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:" + size + "px;z-index:" + zIndex + "}#" + id + " svg{display:block;fill:currentColor;height:" + svgSize + "px;margin:" + svgTop + "px auto 0;width:" + svgSize + "px}#" + id + ".hidden{bottom:-" + size + "px;opacity:0}";
+            var styleEl = document.createElement("style");
+            styleEl.appendChild(document.createTextNode(styles));
+            document.head.insertAdjacentElement("afterbegin", styleEl);
+        }
+        function scrollUp() {
+            var scrollTo = typeof onClickScrollTo === "function" ? onClickScrollTo() : onClickScrollTo;
+            var _window = window, performance = _window.performance, requestAnimationFrame = _window.requestAnimationFrame;
+            if (scrollDuration <= 0 || typeof performance === "undefined" || typeof requestAnimationFrame === "undefined") return setScrollTop(scrollTo);
+            var start = performance.now();
+            var initScrollTop = getScrollTop();
+            var pxsToScrollBy = initScrollTop - scrollTo;
+            requestAnimationFrame(step);
+            function step(timestamp) {
+                var progress = Math.min((timestamp - start) / scrollDuration, 1);
+                setScrollTop(initScrollTop - Math.round(ease(progress) * pxsToScrollBy));
+                if (progress < 1) requestAnimationFrame(step);
+            }
+        }
+        function getScrollTop() {
+            return scrollContainer.scrollTop || scrollDocumentElement && document.documentElement.scrollTop || 0;
+        }
+        function setScrollTop(value) {
+            scrollContainer.scrollTop = value;
+            if (scrollDocumentElement) document.documentElement.scrollTop = value;
+        }
+        function inOutSine(n) {
+            return 0.5 * (1 - Math.cos(Math.PI * n));
+        }
+    } // FUNCTION END
+});
+
+},{}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequire23fc")
+
+//# sourceMappingURL=index.975ef6c8.js.map
