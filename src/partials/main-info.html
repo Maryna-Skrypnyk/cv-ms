@@ -1,0 +1,432 @@
+<div class="about-me-container">
+  <div class="switch-container">
+    <!-- Розмітка перемикача мови для екранів більше 767px-->
+    <div class="select">
+      <select class="selectpicker" id="standard-select">
+        <option value="ua">UA</option>
+        <option value="en" selected>EN</option>
+      </select>
+    </div>
+    <!-- Розмітка перемикача теми -->
+    <div class="toolbar">
+      <div class="theme-switch">
+        <svg
+          class="theme-switch__icon theme-switch__icon--sun"
+          role="img"
+          aria-label="Іконка сонця"
+        >
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
+
+        <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Перемикач темної і світлої теми"
+          />
+          <label
+            aria-hidden="true"
+            class="theme-switch__track"
+            for="theme-switch-toggle"
+          >
+          </label>
+          <div aria-hidden="true" class="theme-switch__marker"></div>
+        </div>
+
+        <svg
+          class="theme-switch__icon theme-switch__icon--moon"
+          aria-label="Іконка місяця"
+        >
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!--about me main info-->
+  <div class="info-container">
+    <div class="info-tablet">
+      <h1 class="name lng-name">Maryna Skrypnyk</h1>
+      <h2 class="profession lng-profession">Front-End Developer</h2>
+    </div>
+
+    <p class="description lng-description">
+      I'm looking for a position in a company that's aimed at growth and
+      progress together with a team. I have sound knowledge of HTML, CSS,
+      JavaScript, and React. I studied the basics of Node.js. Besides, I gained
+      hands-on experience in following Agile/Scrum methodology when working in a
+      team. I'm going to develop my skills as well as grow with a team.
+    </p>
+  </div>
+
+  <!--projects container-->
+  <div class="projects-container">
+    <h3 class="about-me-title lng-projects">Project experience</h3>
+    <ol class="projects-list">
+      <li class="projects-item">
+        <a
+          class="projects-link lng-icecream"
+          href="https://maryna-skrypnyk.github.io/icecream-project-group-9/"
+        >
+          Ice Cream
+        </a>
+        <span class="dots lng-dotsIcecream">............................</span>
+        <span class="link-description">
+          <b>[</b
+          ><span class="tech-name">HTML5, CSS3, SASS, JS, Parcel, GIT</span
+          ><b>]</b>
+        </span>
+        <p class="about-project">
+          <span class="about lng-aboutProject">About the project:</span>
+          <span class="lng-aboutIcecream"
+            >mobile-first adaptive and responsive landing page to introduce ice
+            cream products and attract clients.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-tasks">My tasks:</span>
+          <span class="lng-icecreamTask"
+            >layout of sections Advantages, Gallery, Customer reviews.
+            Coordination of team coding.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-role">My role:</span> Team Lead,
+          <span class="lng-profession">Front-End developer</span> (<span
+            class="lng-team"
+            >team project</span
+          >).
+        </p>
+      </li>
+      <li class="projects-item">
+        <a
+          class="projects-link lng-filmoteka"
+          href="https://zhekager.github.io/project-Filmoteka/"
+        >
+          Filmoteka
+        </a>
+        <span class="dots lng-dotsFilmoteka"
+          >.............................</span
+        >
+        <span class="link-description">
+          <b>[</b
+          ><span class="tech-name"
+            >JS, HTML5, SASS, Parcel, GIT, Handlebars, RestApi,
+            LocalStorage</span
+          ><b>]</b>
+        </span>
+        <p class="about-project">
+          <span class="about lng-aboutProject">About the project:</span>
+          <span class="lng-aboutFilmoteka"
+            >application for choosing a movie with the ability to add movies to
+            the library.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-tasks">My tasks:</span>
+          <span class="lng-filmotekaTask"
+            >responsible for sections My Library, Header. Coordination of team
+            tasks.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-role">My role:</span> Scrum Master,
+          <span class="lng-profession">Front-End developer</span> (<span
+            class="lng-team"
+            >team project</span
+          >).
+        </p>
+      </li>
+      <li class="projects-item">
+        <a
+          class="projects-link lng-phonebook"
+          href="https://phonebook-new.netlify.app/"
+        >
+          Phonebook
+        </a>
+        <span class="dots lng-dotsPhonebook">.........................</span>
+        <span class="link-description">
+          <b>[</b
+          ><span class="tech-name"
+            >JS, React, Redux, Routing, Hooks, Axios,Netlify, Formik, SASS</span
+          ><b>]</b>
+        </span>
+        <p class="about-project">
+          <span class="about lng-aboutProject">About the project:</span>
+          <span class="lng-aboutPhonebook"
+            >web app with authorization, profile page, ability to add, update
+            and remove contacts, and existing contacts filter.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-tasks">My tasks:</span>
+          <span class="lng-phonebookTask"
+            >development of a front-end application on react.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-role">My role:</span>
+          <span class="lng-profession">Front-End developer</span> (<span
+            class="lng-individual"
+            >individual project</span
+          >).
+        </p>
+      </li>
+      <li class="projects-item">
+        <a
+          class="projects-link lng-wallet"
+          href="https://zhekager-makes-great-sites.netlify.app/"
+        >
+          Wallet
+        </a>
+        <span class="dots lng-dotsWallet"
+          >.......................................</span
+        >
+        <span class="link-description">
+          <b>[</b
+          ><span class="tech-name"
+            >React, Node.js, Redux, Routing, Hooks, HTML5, SASS, WebPack,
+            GIT</span
+          ><b>]</b>
+        </span>
+        <p class="about-project">
+          <span class="about lng-aboutProject">About the project:</span>
+          <span class="lng-aboutWallet"
+            >web app with authorization, ability to add transactions for the
+            wallet, and display statistics on expenses filtered by month and
+            year.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-tasks">My tasks:</span>
+          <span class="lng-walletTask"
+            >responsible for authorization, adding transactions by the user on
+            the frontend side, routing, and connecting to the backend. Also
+            implemented logout functionality, modals, and other
+            components.</span
+          >
+        </p>
+        <p class="about-project">
+          <span class="about lng-role">My role:</span> Scrum Master,
+          <span class="lng-profession">Front-End developer</span> (<span
+            class="lng-team"
+            >team project</span
+          >).
+        </p>
+      </li>
+    </ol>
+  </div>
+
+  <!--work experience-->
+  <div class="projects-container">
+    <h3 class="about-me-title lng-work">Work experience</h3>
+    <!--company 1-->
+    <div>
+      <h4 class="profession-title">
+        <a
+          href="https://www.facebook.com/creditexpertiza/about/"
+          class="profession-company lng-expertActivity"
+        >
+          Independent forensic expert activity
+        </a>
+      </h4>
+      <span class="profession-time">
+        2019 – <span class="lng-upToNow">up to now</span>
+        <span class="profession-divider">|</span>
+        <span class="lng-ukraine">Ukraine</span>
+      </span>
+    </div>
+
+    <!--company 2-->
+    <div>
+      <h4 class="profession-title">
+        Credit Expert
+        <a href="https://ua-expert.com/ua/" class="profession-company lng-ersu">
+          «Expert Research Service of Ukraine, Limited Liability Company»
+        </a>
+      </h4>
+      <span class="profession-time">
+        2016 - 2019 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span>
+      </span>
+      <ul class="profession-duties">
+        <li class="profession-duties-item lng-providedExpertise">
+          Provided expertise for court or out-of-court. I wrote over 100 credit
+          expertise reports.
+        </li>
+        <li class="profession-duties-item lng-managedExpertise">
+          Managed content and created content marketing. I wrote over 50
+          specialized publications and articles, which I posted on the web and
+          social networks.
+        </li>
+        <li class="profession-duties-item lng-customer">
+          Provided full customer support services.
+        </li>
+        <li class="profession-duties-item lng-calculation">
+          Developed a calculation system in Excel and adapted it for the
+          majority of credit expertise reports.
+        </li>
+        <li class="profession-duties-item lng-analyzedCourt">
+          Analyzed versatile court decisions from various instances.
+        </li>
+        <li class="profession-duties-item lng-certification">
+          Completed the certification in the Ministry of Justice of Ukraine as
+          an independent forensic expert, specialty "Research of documents of
+          financial and credit transactions".
+        </li>
+      </ul>
+    </div>
+
+    <!-- company 3 -->
+    <div>
+      <h4 class="profession-title lng-bankingActivity">Banking activity</h4>
+      <span class="profession-time">
+        2007 – 2014 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span>
+      </span>
+    </div>
+
+    <div>
+      <h4 class="profession-title">
+        <span class="lng-leadEconomist">Lead Economist</span>
+        <a href="https://vtb.fg.gov.ua/" class="profession-company lng-vtb">
+          «VTB Bank» Public Joint Stock company
+        </a>
+      </h4>
+      <span class="profession-time">
+        2008 - 2014 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span>
+      </span>
+      <!-- <ul class="profession-duties">
+                <li class="profession-duties-item">
+                  Робота з кредитною документацією.
+                </li>
+                <li class="profession-duties-item">
+                  Супроводження видачі кредитів юридичним особам (корпоративні
+                  кредити), перевірка пакету документів, відкриття рахунків,
+                  формування супровідних бухгалтерських проводок, моніторинг
+                  діючих кредитів, нарахування відсотків по кредитах, відстеження
+                  прострочених кредитів, нарахування простроченої заборгованості,
+                  нарахування пені, комісій та інші операції.
+                </li>
+                <li class="profession-duties-item">
+                  Проведення перевірок на відділеннях, філіях банку з метою
+                  контролю та консультації працівників.
+                </li>
+                <li class="profession-duties-item">
+                  Участь у написанні та коригуванні нормативної бази.
+                </li>
+              </ul> -->
+    </div>
+
+    <!--company 4-->
+    <div>
+      <h4 class="profession-title">
+        <span class="lng-leadEconomist">Lead Economist</span>
+        <span class="profession-company lng-ukrsotsbank">
+          «Ukrsotsbank» Joint-stock Commercial Bank
+        </span>
+      </h4>
+      <span class="profession-time">
+        2007 - 2008 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span>
+      </span>
+    </div>
+  </div>
+
+  <!--education-->
+  <div class="projects-container">
+    <h3 class="about-me-title lng-education">Education</h3>
+
+    <!--education 1-->
+    <div>
+      <h4 class="profession-title">
+        <a href="https://kneu.edu.ua/" class="education-company lng-kneu">
+          Kyiv National Economic University
+        </a>
+      </h4>
+      <ul class="education-duties">
+        <li class="profession-duties-item">
+          <p>
+            <span class="lng-management">Management of entrepreneurship</span>
+            <span class="dots lng-dotsManagement"> ..................... </span>
+            <span class="link-description">
+              <b>[</b
+              ><span class="tech-name lng-magister">Magister of Economics</span
+              ><b>]</b>
+            </span>
+          </p>
+        </li>
+        <li class="profession-duties-item">
+          <p>
+            <span class="lng-enterprises">Economic of enterprises</span>
+            <span class="dots lng-dotsBachelor">
+              .................................................
+            </span>
+            <span class="link-description">
+              <b>[</b
+              ><span class="tech-name lng-bachelor"
+                >Bachelor of Economics, teacher of economics</span
+              ><b>]</b>
+            </span>
+          </p>
+        </li>
+      </ul>
+      <span class="profession-time"
+        >2002 - 2007 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span></span
+      >
+    </div>
+  </div>
+
+  <!--additional education-->
+  <div class="projects-container">
+    <h3 class="about-me-title lng-additionalEducation">Additional Education</h3>
+
+    <!--education 1-->
+    <div>
+      <h4 class="profession-title">
+        <a href="https://goit.ua/" class="education-company">
+          IT School GoIT
+        </a>
+      </h4>
+      <p class="education-duties lng-fullStack">Full Stack Developer</p>
+      <span class="profession-time"
+        >2020 - 2021 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span></span
+      >
+      <ul class="profession-duties">
+        <li class="profession-duties-item lng-completed">
+          Completed a 9-month course on front-end and a 2-month course on
+          back-end.
+        </li>
+        <li class="profession-duties-item lng-learned">
+          Learned the workings of JavaScript, React.js, HTML, CSS, and others.
+        </li>
+        <li class="profession-duties-item lng-vsc">
+          Became familiar with using popular coding technology such as Visual
+          Studio Code.
+        </li>
+        <li class="profession-duties-item lng-built">
+          Built several web applications using the technologies above. Three of
+          them are team projects.
+        </li>
+      </ul>
+    </div>
+
+    <!--education 2-->
+    <div>
+      <h4 class="profession-title">
+        <a href="https://www.rock-it.school/" class="education-company">
+          Rock-IT Recruitment School
+        </a>
+      </h4>
+      <p class="education-duties">Smart IT Sourcer</p>
+      <span class="profession-time"
+        >2020 <span class="profession-divider">|</span>
+        <span class="lng-kyiv">Kyiv</span></span
+      >
+    </div>
+  </div>
+</div>
